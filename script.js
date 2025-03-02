@@ -35,3 +35,17 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Contact Form Handling
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    alert(`Thank you, ${name}! Your message has been sent.`);
+
+ 
+    this.reset();
+});
